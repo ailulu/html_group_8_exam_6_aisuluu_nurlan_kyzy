@@ -1,0 +1,15 @@
+extends layout.pug
+
+block content
+  .main
+    .sidebar
+      #user
+        a.user__name(href="#") &nbsp
+        nav.menu
+          a.menu__item(href="#") Profile
+          a#show_posts.menu__item(href="#") Blog
+          a#show-albums.menu__item(href="#") Albums
+    .content
+      h1#title Blog
+      .preview__wrap
+        

@@ -1,0 +1,23 @@
+@import mixins
+
+$colors: ( 'red': #e84c3d, 'yellow': #fdbd1f, 'green': #1bbc9b, 'black': #000 )
+$sizes: 'xs', 'sm', 'md', 'lg'
+
+@each $colorName, $colorHex in $colors
+	.btn-#{$colorName}
+		+btn($colorHex)
+
+@each $size in $sizes
+	@for $i from 1 through 12
+		.col-#{$size}-#{$i}
+			width: 100% / (12/$i)
+
+body 
+	background: skyblue
+
+	+tablet
+		background: grey
+		font-size: 16px
+	+desctop
+		background: aqua
+		font-size: 14px

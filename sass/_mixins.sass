@@ -1,0 +1,31 @@
+=btn($color)
+	display: inline-block
+	color: #fff
+	padding: 10px 10px
+	background: $color
+	font:
+		size: 15px 
+		family: 'Fjalla One'
+		weight: normal
+	text:
+		transform: uppercase
+		decoration: none
+		align: center
+$tablet-up: 'screen and (min-width: 600px)'
+$desctop-up: 'screen and (min-width: 900px)'
+
+=tablet
+	@media screen #{$tablet-up}
+		@content
+=desctop
+	@media screen #{$desctop-up}
+		@content
+=placeholder
+	&::-webkit-input-placeholder
+	@content
+	&:-moz-placeholder
+	@content
+	&::-moz-placeholder
+	@content
+	&:-ms-input-placeholder
+	@content
